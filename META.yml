@@ -3,8 +3,9 @@ abstract: Helps you determine best size for your Tk-Wizard application
 author: 
   - Martin 'Kingpin' Thurn <mthurn@cpan.org>
 build_requires: 
+  Data::Dumper: 0
   ExtUtils::testlib: 0
-  IO::Capture::Extended: 0
+  IO::Capture::Stdout::Extended: 0
   Test::More: 0
   Test::Pod: 0
   Test::Pod::Coverage: 0
@@ -23,4 +24,4 @@ no_index:
 requires: 
   Carp: 0
   Tk::Wizard: 0
-version: 2.222
+version: 2.223

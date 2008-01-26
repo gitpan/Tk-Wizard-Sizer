@@ -5,13 +5,14 @@ use inc::Module::Install;
 
 name('Tk-Wizard-Sizer');
 abstract('Helps you determine best size for your Tk-Wizard application');
-version(2.222);
+version(2.223);
 author(q{Martin 'Kingpin' Thurn <mthurn@cpan.org>});
 license('perl');
 
 requires("Carp");
+build_requires("Data::Dumper");
 build_requires("ExtUtils::testlib");
-build_requires("IO::Capture::Extended");
+build_requires("IO::Capture::Stdout::Extended");
 build_requires("Test::More");
 build_recommends('Test::Pod');
 build_recommends('Test::Pod::Coverage');

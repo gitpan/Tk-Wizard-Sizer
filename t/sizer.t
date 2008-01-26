@@ -17,7 +17,11 @@ my @asClass;
 
 BEGIN
   {
-  @asClass = qw( Tk::Wizard::Sizer Tk::Wizard::Installer::Sizer Tk::Wizard::Installer::Win32::Sizer );
+  @asClass = qw( Tk::Wizard::Sizer Tk::Wizard::Installer::Sizer );
+  if ($^O =~ m!win32!i)
+    {
+    push @asClass, 'Tk::Wizard::Installer::Win32::Sizer';
+    } # if
   my $mwTest;
   eval { $mwTest = Tk::MainWindow->new };
   if ($@)
