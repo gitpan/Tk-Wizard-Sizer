@@ -5,7 +5,7 @@ use inc::Module::Install;
 
 name('Tk-Wizard-Sizer');
 abstract('Helps you determine best size for your Tk-Wizard application');
-version(2.223);
+version(2.224);
 author(q{Martin 'Kingpin' Thurn <mthurn@cpan.org>});
 license('perl');
 

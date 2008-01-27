@@ -1,5 +1,5 @@
 
-# $Id: Sizer.pm,v 1.11 2008/01/22 03:56:18 Daddy Exp $
+# $Id: Sizer.pm,v 1.12 2008/01/27 14:25:40 Daddy Exp $
 
 package Tk::Wizard::Sizer;
 
@@ -7,7 +7,7 @@ use strict;
 use warnings;
 
 our
-$VERSION = do { my @r = ( q$Revision: 1.11 $ =~ /\d+/g ); sprintf "%d." . "%03d" x $#r, @r };
+$VERSION = do { my @r = ( q$Revision: 1.12 $ =~ /\d+/g ); sprintf "%d." . "%03d" x $#r, @r };
 
 =head1 NAME
 
@@ -92,8 +92,8 @@ sub _prenext
     $self->{_max_height_} = $iH;
     } # if
   printf STDOUT (qq{For page #%d ("%s"), final dimensions were:\n},
-                 $self->{wizardPagePtr},
-                 $self->{frame_titles}->[$self->{wizardPagePtr}],
+                 $self->currentPage,
+                 $self->{frame_titles}->[$self->currentPage-1],
                 );
   print STDOUT "  -width => $iW, -height => $iH,\n";
   } # _prenext

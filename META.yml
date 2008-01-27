@@ -24,4 +24,4 @@ no_index:
 requires: 
   Carp: 0
   Tk::Wizard: 0
-version: 2.223
+version: 2.224
